@@ -22,10 +22,10 @@ Each website gets its own notes — simple, clean, and distraction-free.
 ## 📸 Preview
 
 ### Light Mode
-![Light Mode](<img width="447" height="535" alt="Screenshot 2026-01-12 155322" src="https://github.com/user-attachments/assets/f86695e9-bd3f-4f0c-95fa-7497ea4dc248" />)
+<img width="447" height="535" alt="Screenshot 2026-01-12 155322" src="https://github.com/user-attachments/assets/f86695e9-bd3f-4f0c-95fa-7497ea4dc248" /> 
 
 ### Dark Mode
-![Dark Mode](<img width="445" height="552" alt="Screenshot 2026-01-12 155620" src="https://github.com/user-attachments/assets/41fbbeee-f1c4-49df-aad3-82235dbdc1e3" />)
+<img width="445" height="552" alt="Screenshot 2026-01-12 155620" src="https://github.com/user-attachments/assets/41fbbeee-f1c4-49df-aad3-82235dbdc1e3" /> 
 
 
 ---
