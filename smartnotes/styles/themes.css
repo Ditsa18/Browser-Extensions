@@ -1,0 +1,104 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root {
+  --transition: 0.25s ease;
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-note: 'Caveat', cursive;
+
+  --text-primary: #2e2e2e;
+  --text-secondary: #6b6b6b;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-ui);
+  background: transparent; /* required for Chrome popup */
+  color: var(--text-primary);
+  transition: color var(--transition);
+}
+
+/* =========================
+   APP CONTAINER
+========================= */
+
+.app {
+  width: 360px;
+  max-width: 100%;
+  padding: 14px;
+  border-radius: 20px;
+  height: fit-content;
+  transition: background var(--transition);
+}
+
+/* =========================
+   ☀️ LIGHT MODE 🌸
+========================= */
+
+body.light {
+  --text-primary: #2e2e2e;
+  --text-secondary: #6b6b6b;
+}
+
+body.light .app {
+  background-image: linear-gradient(
+    to right top,
+    #f6fbff,
+    #c8e3fd,
+    #9ecafb,
+    #76b0f8,
+    #5195f4
+  );
+}
+
+/* =========================
+   🌙 DARK MODE
+========================= */
+
+body.dark {
+  --text-primary: #f1f1f1;
+  --text-secondary: #b5b5b5;
+}
+
+body.dark .app {
+  background-image: linear-gradient(
+    to right top,
+    #bdc6cd,
+    #8a9196,
+    #5a5f62,
+    #2e3133,
+    #000203
+  );
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 360px) {
+  .app {
+    padding: 12px;
+  }
+}
+
+@media (min-width: 600px) {
+  .app {
+    width: 420px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app {
+    width: 480px;
+  }
+}

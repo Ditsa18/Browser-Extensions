@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "SmartNotes",
+  "short_name": "SmartNotes",
+  "description": "Cute, aesthetic notes saved per website to help you stay focused and organized.",
+  "version": "1.0.0",
+
+  "action": {
+    "default_title": "SmartNotes",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

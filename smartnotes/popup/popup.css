@@ -1,0 +1,311 @@
+/* =========================
+   BASE
+========================= */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 18px;
+  height: fit-content;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.app-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.app-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Theme toggle never disappears */
+.theme-btn {
+  min-width: 26px;
+  min-height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   ICON BUTTONS
+========================= */
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.icon-btn:active {
+  transform: scale(0.95);
+}
+
+/* =========================
+   DARK MODE ICON VISIBILITY
+========================= */
+
+body.dark .icon-btn,
+body.dark .icon-btn i {
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+body.dark .icon-btn:hover {
+  opacity: 1;
+}
+
+body.dark .theme-btn {
+  color: #ffffff;
+}
+
+/* =========================
+   SITE LABEL
+========================= */
+
+.site-label {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+body.dark .site-label,
+body.dark .app-name {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================
+   NOTE
+========================= */
+
+.note-wrapper {
+  position: relative;
+  padding: 18px 16px;
+  border-radius: 22px;
+  min-height: 160px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease;
+}
+
+.note-wrapper:hover {
+  transform: translateY(-2px);
+}
+
+.doodle {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.2rem;
+  opacity: 0.25;
+}
+
+#notes {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  resize: none;
+  outline: none;
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #2e2e2e;
+}
+
+#notes::placeholder {
+  color: rgba(46, 46, 46, 0.45);
+}
+
+/* =========================
+   NOTE STYLES
+========================= */
+
+.pink-note {
+  background-color: #ffe4ee;
+  background-image: radial-gradient(#f3a9c2 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.cream-note {
+  background-color: #fff5e9;
+  border-radius: 30px;
+}
+
+.mint-note {
+  background-color: #e6f7f1;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 22px,
+    rgba(0, 0, 0, 0.06) 23px
+  );
+}
+
+/* =========================
+   META
+========================= */
+
+.meta {
+  text-align: right;
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+body.dark .meta {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.save-btn {
+  padding: 10px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  background: rgba(0, 0, 0, 0.08);
+  color: #2e2e2e;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-1px);
+}
+
+.save-btn:active {
+  transform: scale(0.97);
+}
+
+body.dark .save-btn {
+  background: rgba(255, 255, 255, 0.6);
+  color: #1f1f1f;
+}
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.style-label {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  text-align: center;
+}
+
+body.dark .style-label {
+  color: rgba(255, 255, 255, 0.75);
+  opacity: 1;
+}
+
+.style-row,
+.action-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Active style indicator */
+.style-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.style-btn.active {
+  opacity: 1;
+  transform: scale(1.25);
+}
+
+.style-btn:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* =========================
+   STATUS (ANIMATED)
+========================= */
+
+.status {
+  text-align: center;
+  font-size: 0.75rem;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.status.show {
+  opacity: 0.85;
+  transform: translateY(0);
+}
+
+/* =========================
+   ACTION FEEDBACK ANIMATIONS
+========================= */
+
+.saved {
+  animation: pop 0.35s ease;
+}
+
+.deleted {
+  animation: shake 0.35s ease;
+}
+
+.exported {
+  animation: bounce 0.4s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}

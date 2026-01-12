@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartNotes</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../icon.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (stable) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="popup.css" />
+  <link rel="stylesheet" href="../styles/themes.css" />
+</head>
+
+<!-- ❗ NO hardcoded theme here -->
+<body>
+  <div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="brand">
+        <img src="../icon.png" alt="SmartNotes icon" class="app-icon">
+        <span class="app-name">SmartNotes</span>
+      </div>
+
+      <!-- Theme Toggle (JS controls icon) -->
+      <button
+        id="themeToggle"
+        class="icon-btn theme-btn"
+        title="Toggle theme"
+        aria-label="Toggle theme">
+      </button>
+    </header>
+
+    <!-- SITE -->
+    <div class="site-label">
+      notes for <span id="siteName">current-site.com</span>
+    </div>
+
+    <!-- NOTE -->
+    <div class="note-wrapper pink-note" id="noteWrapper">
+      <span class="doodle">✿</span>
+      <textarea
+        id="notes"
+        placeholder="write something here…">
+      </textarea>
+    </div>
+
+    <!-- META -->
+    <div class="meta">
+      <span id="lastEdited">last edited · —</span>
+    </div>
+
+    <!-- SAVE -->
+    <button id="saveBtn" class="save-btn">
+      save
+    </button>
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+
+      <!-- NOTE STYLE -->
+      <div class="style-section">
+        <div class="style-label">change note style</div>
+        <div class="style-row">
+          <button class="style-btn" data-style="pink">🩷</button>
+          <button class="style-btn" data-style="cream">🤍</button>
+          <button class="style-btn" data-style="mint">💚</button>
+        </div>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="action-row">
+
+        <!-- ⭐ Favorite / Pin -->
+        <button id="pinSite" class="icon-btn" title="Favorite">
+          <i class="fa-solid fa-star"></i>
+        </button>
+
+        <!-- 📂 Past Notes (NEW) -->
+        <button id="pastNotesBtn" class="icon-btn" title="Past notes">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        </button>
+
+        <!-- ⬇ Export -->
+        <button id="exportBtn" class="icon-btn" title="Export">
+          <i class="fa-solid fa-download"></i>
+        </button>
+
+        <!-- 🗑 Delete -->
+        <button id="clearBtn" class="icon-btn" title="Delete">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- STATUS (animations hook) -->
+    <div class="status" id="statusMsg"></div>
+
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
